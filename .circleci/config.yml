@@ -2,12 +2,12 @@ version: 2
 jobs:
  build:
    machine: true
+   docker:
+     # specify the version you desire here
+     - image: circleci/node:11.6.0
+
    steps:
      - checkout
-     # start proprietary DB using private Docker image
-     # with credentials stored in the UI
-     - run: |
-         docker run -d -p 3000:3000 hello-ci-workflow; sleep 10
 
      # build the application image
      - run: docker build -t hello-ci-workflow:$CIRCLE_BRANCH .
