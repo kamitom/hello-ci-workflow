@@ -7,8 +7,7 @@ app.get('/', function (req, res) {
 
   let testMe = Math.random();
 
-
-  res.send(`Hello CICD for Dockerfile 2: ${testMe}!`);
+  res.send(`Hello CICD for Dockerfile 2 and eb create env-dev3 --profile itri --region ap-northeast-1 : ${testMe}!`);
 });
 
 var server = app.listen(4830, function () {
