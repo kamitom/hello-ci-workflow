@@ -10,7 +10,7 @@ jobs:
 
       # build and push Docker image
       - run: |
-          TAG=0.1.$CIRCLE_BUILD_NUM
+          TAG=0.1.1
           docker build -t hello-ci-workflow:$TAG .     
 
       # deploy the image
