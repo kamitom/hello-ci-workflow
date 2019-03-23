@@ -4,7 +4,11 @@ var app = express();
 
 app.get('/', function (req, res) {
   // res.send('Hello World!');
-  res.send('Hello CICD for Dockerfile !');
+
+  let testMe = Math.random();
+
+
+  res.send(`Hello CICD for Dockerfile 2: ${testMe}!`);
 });
 
 var server = app.listen(4830, function () {
